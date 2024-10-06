@@ -1,4 +1,7 @@
 # kong-jwt-2-token
+This Project built for help to generate token (Bearer Token) from jwt json data that generate from Kong Gateway JWT plugin.
+To modify python code require Python Versin 3.19.x
+
 
 ## Build Image
 ```
