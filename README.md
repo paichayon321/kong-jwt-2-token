@@ -2,6 +2,9 @@
 This Project built for help to generate token (Bearer Token) from jwt json data that generate from Kong Gateway JWT plugin.
 To modify python code require Python Versin 3.19.x
 
+```
+{"updated_at":1728193840,"tags":[],"username_lower":"jwt-user","id":"20d65404-c322-443f-98af-1bf5ae2910e3","custom_id":null,"username":"jwt-user","created_at":1728193840,"type":0}
+```
 
 ## Build Image
 ```
