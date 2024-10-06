@@ -13,9 +13,9 @@ def generate_jwt(iss, secret, exp_minutes):
     # Calculate expiration time in UTC
     expiration_time = current_time + datetime.timedelta(minutes=exp_minutes)
     print("Expire Time:",expiration_time)
-    # expiration_utc = expiration_time - timezone_offset  # Convert back to UTC
+    expiration_utc = expiration_time - timezone_offset  # Convert back to UTC
     # print(expiration_utc)
-    exptime = int(expiration_time.timestamp()) 
+    exptime = int(expiration_utc.timestamp())
     print("Expire SecTime:",exptime)
     # JWT header
     header = {
