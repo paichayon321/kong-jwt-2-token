@@ -14,7 +14,7 @@ docker push paichayon/jwt2token
 
 ## Usage: 
 ```
-docker run --rm paichayon/jwt2token <iss> <secret> <exp_minutes>
+docker run --rm paichayon/jwt2token <iss(key)> <secret> <exp_minutes>
 ```
 
 ## Run with Sample Data:
