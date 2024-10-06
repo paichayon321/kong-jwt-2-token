@@ -7,7 +7,8 @@ timezone_offset = datetime.timedelta(hours=7)
 # Function to calculate the expiration time and return the token
 def generate_jwt(iss, secret, exp_minutes):
     # Get current time in GMT+7
-    current_time = datetime.datetime.utcnow() + timezone_offset
+    #current_time = datetime.datetime.utcnow() + timezone_offset
+    current_time = datetime.datetime.now(datetime.UTC) + timezone_offset
     print("Current Time",current_time)
     # Calculate expiration time in UTC
     expiration_time = current_time + datetime.timedelta(minutes=exp_minutes)
