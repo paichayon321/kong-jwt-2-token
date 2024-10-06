@@ -1,6 +1,6 @@
 import jwt
 import datetime
-
+import sys
 # Offset for GMT+7
 timezone_offset = datetime.timedelta(hours=7)
 
@@ -22,7 +22,7 @@ def generate_jwt(iss, secret, exp_minutes):
         "typ": "JWT"
     }
 
-    # JWT payload
+    # JWT payload                               
     payload = {
         "iss": iss,
         "exp": exptime  # Expiration in UNIX timestamp
@@ -33,11 +33,24 @@ def generate_jwt(iss, secret, exp_minutes):
 
     return token
 
-# Example usage
-issuer = "2cATOGXM6yFuwAcMc8qnWHtHvnZxU1ir"  # Example iss
-secret_key = "2ZWQSZcGsJaVQ1q1uGwHGtJjEBJQhFgZ"  # Example secret
-expiration_in_minutes = 1  # Token expires in 5 minutes
+if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: python myfile.py <iss> <secret> <exp_minutes>")
+        sys.exit(1)
 
-# Generate and print the token
-jwt_token = generate_jwt(issuer, secret_key, expiration_in_minutes)
-print(jwt_token)
+    # Get the values from the command-line arguments
+    # Test
+    #issuer = "2cATOGXM6yFuwAcMc8qnWHtHvnZxU1ir"  # Example iss
+    #secret_key = "2ZWQSZcGsJaVQ1q1uGwHGtJjEBJQhFgZ"  # Example secret
+    #expiration_in_minutes = 1  # Token expires in 5 minutes
+
+    issuer = sys.argv[1]  # The 'iss' parameter
+    secret_key = sys.argv[2]  # The 'secret' parameter
+    expiration_in_minutes = int(sys.argv[3])  # The 'exp' parameter (in minutes)
+
+    # Generate and print the JWT
+    jwt_token = generate_jwt(issuer, secret_key, expiration_in_minutes)
+    print(jwt_token)
+
+# Example usage
+
