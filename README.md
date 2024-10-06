@@ -3,7 +3,7 @@ This Project built for help to generate token (Bearer Token) from jwt json data 
 To modify python code require Python Versin 3.19.x
 
 ```
-{"updated_at":1728193840,"tags":[],"username_lower":"jwt-user","id":"20d65404-c322-443f-98af-1bf5ae2910e3","custom_id":null,"username":"jwt-user","created_at":1728193840,"type":0}
+{"tags":null,"secret":"2ZWQSZcGsJaVQ1q1uGwHGtJjEBJQhFgZ","id":"7763c17e-86c8-4261-bcf6-4d51e7704544","consumer":{"id":"20d65404-c322-443f-98af-1bf5ae2910e3"},"created_at":1728193872,"rsa_public_key":null,"algorithm":"HS256","key":"2cATOGXM6yFuwAcMc8qnWHtHvnZxU1ir"}
 ```
 
 ## Build Image
