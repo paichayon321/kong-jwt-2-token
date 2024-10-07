@@ -39,8 +39,11 @@ docker ps --filter "status=exited" --format "{{.ID}}" | xargs docker rm
 ---
 # Run Shell Script
 
+```
 Usage: ./jwt2token.sh <iss> <exp_in_minutes> <secret>
+```
 
+Sample Result
 ```
 ./jwt2token.sh qj5FTZVHORlnRiEpinzyjfkp2oGC8F4y 1 NKEG9GYMzG4lvF9AQLGkerfFsMOb5I0e
 JWT: eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.eyJpc3MiOiJxajVGVFpWSE9SbG5SaUVwaW56eWpma3Ayb0dDOEY0eSIsImV4cCI6MTcyODMwNTA3NH0.pM8BVasX8qQSs_gJ09MmqJTy_gcLVKUnD9uhehK06c8
