@@ -37,4 +37,4 @@ signature=$(echo -n "$message" | openssl dgst -sha256 -hmac "$secret" -binary | 
 jwt_token="$message.$signature"
 
 # Output the JWT
-echo "JWT: $jwt_token"
+echo "$jwt_token"
